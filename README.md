@@ -8,7 +8,7 @@ It runs as a systemd service and sends email alerts for sustained high CPU or RA
 Download the `.deb` file from GitHub Releases and run only these commands:
 
 ```bash
-sudo dpkg -i cpu-alert_<version>_amd64.deb
+sudo dpkg -i cpu-alert_v1.0.0_amd64.deb
 sudo systemctl enable --now cpu-alert.service
 sudo systemctl status cpu-alert.service
 ```
