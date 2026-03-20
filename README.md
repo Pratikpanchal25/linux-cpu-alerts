@@ -8,7 +8,7 @@ It runs as a systemd service and sends email alerts for sustained high CPU or RA
 Download the `.deb` file from GitHub Releases and run only these commands:
 
 ```bash
-sudo dpkg -i watchd_1.0.1_amd64.deb
+sudo dpkg -i watchd_1.0.2_amd64.deb
 sudo systemctl enable --now watchd.service
 sudo systemctl status watchd.service
 ```
@@ -23,7 +23,7 @@ sudo systemctl restart watchd.service
 ## Where To Download .deb
 
 - Open: https://github.com/Pratikpanchal25/watchd/releases/latest
-- Download asset: `watchd_1.0.1_amd64.deb`
+- Download asset: `watchd_1.0.2_amd64.deb`
 
 ## Config File Location
 
@@ -78,7 +78,7 @@ If `.deb` install reports dependency errors:
 
 ```bash
 sudo apt-get install -f -y
-sudo dpkg -i watchd_1.0.1_amd64.deb
+sudo dpkg -i watchd_1.0.2_amd64.deb
 ```
 
 ## Useful Service Commands
