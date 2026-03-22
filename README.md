@@ -22,7 +22,9 @@ VERSION=1.0.2
 ARCH=amd64
 
 curl -fL -o /tmp/watchd.deb \
-  "https://github.com/Pratikpanchal25/watchd/releases/download/${VERSION}/watchd_${VERSION}_${ARCH}.deb"
+  "https://github.com/Pratikpanchal25/Watchd/releases/download/v${VERSION}/watchd_${VERSION}_${ARCH}.deb"
+
+curl -I "https://github.com/Pratikpanchal25/Watchd/releases/download/v${VERSION}/watchd_${VERSION}_${ARCH}.deb"
 
 sudo apt-get update
 sudo apt-get install -y /tmp/watchd.deb
@@ -30,11 +32,11 @@ sudo systemctl enable --now watchd.service
 sudo systemctl status watchd.service
 ```
 
-If your release tag includes a `v` prefix (example: `v1.0.2`), use:
+If your release tag does not include a `v` prefix, use:
 
 ```bash
 curl -fL -o /tmp/watchd.deb \
-  "https://github.com/Pratikpanchal25/watchd/releases/download/v${VERSION}/watchd_${VERSION}_${ARCH}.deb"
+  "https://github.com/Pratikpanchal25/Watchd/releases/download/${VERSION}/watchd_${VERSION}_${ARCH}.deb"
 ```
 
 If dependency errors appear during install:
@@ -47,7 +49,7 @@ sudo apt-get install -f -y
 Optional: auto-download the latest `amd64` `.deb` from GitHub API:
 
 ```bash
-curl -fsSL https://api.github.com/repos/Pratikpanchal25/watchd/releases/latest \
+curl -fsSL https://api.github.com/repos/Pratikpanchal25/Watchd/releases/latest \
 | grep browser_download_url \
 | grep 'amd64.deb' \
 | cut -d '"' -f 4 \
@@ -65,9 +67,9 @@ sudo systemctl restart watchd.service
 
 ## Where To Download .deb
 
-- Open: https://github.com/Pratikpanchal25/watchd/releases/latest
+- Open: https://github.com/Pratikpanchal25/Watchd/releases/latest
 - Download asset: `watchd_1.0.2_amd64.deb`
-- Server/CLI download format: `https://github.com/Pratikpanchal25/watchd/releases/download/<tag>/watchd_<version>_amd64.deb`
+- Server/CLI download format: `https://github.com/Pratikpanchal25/Watchd/releases/download/<tag>/watchd_<version>_amd64.deb`
 
 ## Config File Location
 
